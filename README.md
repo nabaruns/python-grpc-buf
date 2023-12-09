@@ -1,4 +1,4 @@
-# python-service
+# python-grpc-buf
 
 1. Generate proto files
 
