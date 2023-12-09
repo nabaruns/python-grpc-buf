@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package grpc_buf;
+
+service ExampleApi {
+    rpc GetExample (GetExampleRequest) returns (GetExampleResponse) {}
+    rpc CreateExample (CreateExampleRequest) returns (CreateExampleResponse) {}
+}
+
+message Example {
+    string id = 1;
+    string name = 2;
+}
+
+message GetExampleRequest {
+    string id = 1;
+}
+
+message GetExampleResponse {
+    Example example = 1;
+}
+
+message CreateExampleRequest {
+    Example example = 1;
+}
+
+message CreateExampleResponse {
+    Example example = 1;
+}
